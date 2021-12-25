@@ -1,9 +1,12 @@
+$border_color: #CFC3C3;
+$shadow_color: rgba(0, 0, 0, 0.2);
+
 .card {
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  box-shadow: 0 4px 8px 0 $shadow_color;
   transition: 0.3s;
   width: 400px;
   cursor: pointer;
-  border: 0.1px solid rgb(207, 195, 195);
+  border: 0.1px solid $border_color;
   border-radius: 5%;
   position: relative;
   overflow: hidden;
@@ -14,11 +17,12 @@
   display: inline;
   margin: 0 auto;
   height: 200px;
+  border-bottom: 0.1px solid $border_color;
   overflow-wrap: anywhere;
 }
 
 .card:hover {
-  box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.2);
+  box-shadow: 0 10px 20px 0 $shadow_color;
 }
 
 .card-body {
@@ -31,7 +35,7 @@
 
   p.card-description {
     font-size: 15px;
-    color: rgb(136, 128, 128);
+    color: #888080;
     font-weight: 400;
     margin-top: 10px;
     margin-bottom: 5px;
@@ -41,6 +45,6 @@
   p.card-footer {
     font-size: 12px;
     font-weight: 400;
-    color: rgb(83, 77, 77);
+    color: #534D4D;
   }
 }
