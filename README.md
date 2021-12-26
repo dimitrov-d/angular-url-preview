@@ -1,3 +1,5 @@
+<div align="center"><img src="logo.png" width="400" height="400" style="display: block;  margin-left: auto;  margin-right: auto;  width: 50%;" /></div>
+
 ## Angular URL Preview
 
 Angular UI card component which fetches and displays metadata from a URL (title, description, image and site name).
