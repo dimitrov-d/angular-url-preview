@@ -1,6 +1,6 @@
 {
   "name": "angular-url-preview",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "private": false,
   "description": "Angular UI card component which fetches and displays metadata from a URL (title, description, image and site name).",
   "author": "Damjan Dimitrov",
