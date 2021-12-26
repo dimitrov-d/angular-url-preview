@@ -1,24 +1,36 @@
-# AngularUrlPreview
+## Angular URL Preview
 
-This library was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.0.0.
+Angular UI card component which fetches and displays metadata from a URL (title, description, image and site name).
 
-## Code scaffolding
+### Installation
 
-Run `ng generate component component-name --project angular-url-preview` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module --project angular-url-preview`.
-> Note: Don't forget to add `--project angular-url-preview` or else it will be added to the default project in your `angular.json` file. 
+`npm install angular-url-preview`
 
-## Build
+In app.module.ts:
+```typescript
+import { NgModule } from  '@angular/core';
+import { BrowserModule } from  '@angular/platform-browser';
+import { AppComponent } from  './app.component';
+import { AngularUrlPreviewModule } from  'angular-url-preview';
 
-Run `ng build angular-url-preview` to build the project. The build artifacts will be stored in the `dist/` directory.
+@NgModule({
+declarations: [AppComponent],
+imports: [BrowserModule, AngularUrlPreviewModule],
+bootstrap: [AppComponent]
+})
+export  class  AppModule { }
+```
 
-## Publishing
+### Usage
 
-After building your library with `ng build angular-url-preview`, go to the dist folder `cd dist/angular-url-preview` and run `npm publish`.
+In the component's template:
 
-## Running unit tests
+```html
+<ngx-url-preview  url="example.com"></ngx-url-preview>
+```
 
-Run `ng test angular-url-preview` to execute the unit tests via [Karma](https://karma-runner.github.io).
+Specifying the URL is mandatory and it can be in any format, such as:
+ - Apex domain: example.com
+ - Subdomain: www.example.com
+ - With protocol: https://example.com or https://www.example.com
 
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
