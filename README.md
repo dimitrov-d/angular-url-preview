@@ -36,7 +36,7 @@ export class AppModule { }
 In the component's template:
 
 ```html
-<ngx-url-preview  url="example.com"></ngx-url-preview>
+<ngx-url-preview url="example.com"></ngx-url-preview>
 ```
 
 Specifying the URL is mandatory and it can be in any format, such as:
