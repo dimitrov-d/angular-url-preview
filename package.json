@@ -1,6 +1,25 @@
 {
   "name": "angular-url-preview",
-  "version": "1.0.0",
+  "version": "1.0.5",
+  "private": false,
+  "description": "A lightweight URL preview card UI component which shows the metadata (title, description, image etc.) of a custom URL",
+  "author": "Damjan Dimitrov",
+  "keywords": [
+    "angular",
+    "angular-link-preview",
+    "url",
+    "link",
+    "metadata",
+    "preview",
+    "card"
+  ],
+  "bugs": {
+    "url": "https://github.com/dimitrov-d/angular-url-preview/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dimitrov-d/angular-url-preview.git"
+  },
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
@@ -8,7 +27,6 @@
     "watch": "ng build --watch --configuration production",
     "test": "ng test"
   },
-  "private": true,
   "dependencies": {
     "@angular/animations": "~13.0.0",
     "@angular/common": "~13.0.0",
