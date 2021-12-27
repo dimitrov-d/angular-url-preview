@@ -35,7 +35,7 @@ export class AngularUrlPreviewComponent implements OnInit {
         // Assign capitalized site name to metadata if it is not set
         this.metadata.siteName ||= siteName[0].toUpperCase() + siteName.substring(1).toLowerCase();
         // Relative asset URL
-        if (this.metadata.image.startsWith('/') && !this.customImageSrc)
+        if (this.metadata.image?.startsWith('/') && !this.customImageSrc)
           this.metadata.image = this.metadata.url + this.metadata.image;
 
         this.metadata.image = this.customImageSrc || this.metadata.image;

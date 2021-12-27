@@ -6,3 +6,11 @@
     <p class="card-footer"> {{metadata.siteName}} &#9679; {{metadata.hostname}} </p>
   </div>
 </div>
+
+<div class="card loading" *ngIf="!metadata">
+  <div class="card-image"></div>
+  <div class="card-body">
+    <h2></h2>
+    <p></p>
+  </div>
+</div>
