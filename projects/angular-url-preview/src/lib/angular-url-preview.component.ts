@@ -10,6 +10,9 @@ import { URLMetadata } from './types/url-metadata';
 })
 export class AngularUrlPreviewComponent implements OnInit {
   @Input() url!: string;
+  @Input() customImageSrc?: string;
+
+  proxyUrl = 'https://rlp-proxy.herokuapp.com/v2';
   metadata!: URLMetadata;
 
   constructor(private http: HttpClient) { }
@@ -19,7 +22,7 @@ export class AngularUrlPreviewComponent implements OnInit {
 
     type metadataResult = { metadata: URLMetadata };
 
-    this.http.get(`https://rlp-proxy.herokuapp.com/v2?url=${this.url}`)
+    this.http.get(`${this.proxyUrl}?url=${this.url}`)
       .pipe(catchError(error => {
         if (error.status === 404) return throwError(() => `URL not found: ${this.url}`);
         else return throwError(() => `Error fetching URL metadata for ${this.url}`);;
@@ -31,6 +34,11 @@ export class AngularUrlPreviewComponent implements OnInit {
         const siteName = this.metadata.hostname.split('.').splice(-2)[0];
         // Assign capitalized site name to metadata if it is not set
         this.metadata.siteName ||= siteName[0].toUpperCase() + siteName.substring(1).toLowerCase();
+        // Relative asset URL
+        if (this.metadata.image.startsWith('/') && !this.customImageSrc)
+          this.metadata.image = this.metadata.url + this.metadata.image;
+
+        this.metadata.image = this.customImageSrc || this.metadata.image;
       });
   }
 
