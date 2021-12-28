@@ -1,4 +1,4 @@
-<div align="center"><img src="https://lh3.googleusercontent.com/OdQTZV9_knDmMGcjMYOc1zh1s8UZkCsZKl2s3jTIZHN2WB5vCDVj751eancGiuka4NDSJJl_X6r6aCjL4RODLZdJ0lW5lFHvLNGMGtp5WNaU_C6IZXNLmk8XyhiKPOF9Fa4dShMZMPjzkxeYQeK32iT3z6nUYW2vSOPL7ROUbrWCxvTCTMvf-qjLKgv7fYaqJ6j2JEvKQxSgkZhdY8q6qvxYHrDJGwmwF41xG7oBO1biohtPmwLsiOftJdDtsqXeNBi-cHzsgmZbygilGTYfcb9pPUNwO3BmtFkbEHtU2iHnOUJ4jxQ43nJFIhIDkO7py4ZhyEsIYkFoJjGeaN-Ge3cwiRnH5w-n0x4gbQzLW_m6Thje7w2YmokRMGNlN2tgSGZ_19sZYZ6nQjObDa95ovBqsUyiDpWddwLgUpuHUfCtZ7hVRx1aiXwNWgXA7U7FYc_6U7yHphYpeANkyU5h57ugNS670K46mAKAfOb8nCOUzrCyCYZaEnORU6P4cUGb6WDaxgp9rD1ocAsGIz_SzXegLgJvcQZgWT1gliln4x-7jdFFOzMWmURNDYueuT-V9PGVURGz7xBqFm2Ad7xiMRHqxEu6BEg4o2OwykCecO9XB-JumnFvvjzVGwQAJ9mam_2J5LHaU9I3JW0KFsCn8EYSymaQ_V2Rodtyv-ANrqiSDCOSbRalLk91-xmAZIQGq-tRJm6jZL5ABaIjMYSwtyA=w814-h702-no?authuser=0"  width="400"  height="400" style="display: block; margin-left: auto; margin-right: auto; width: 50%;"/></div>
+<div align="center"><img src="https://i.imgur.com/eEPemyL.png" width="400" height="400" style="display: block; margin-left: auto; margin-right: auto; width: 50%;"/></div>
 
 # Angular URL Preview
 

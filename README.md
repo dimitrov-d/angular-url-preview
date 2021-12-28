@@ -1,4 +1,4 @@
-<div align="center"><img src="https://lh3.googleusercontent.com/OdQTZV9_knDmMGcjMYOc1zh1s8UZkCsZKl2s3jTIZHN2WB5vCDVj751eancGiuka4NDSJJl_X6r6aCjL4RODLZdJ0lW5lFHvLNGMGtp5WNaU_C6IZXNLmk8XyhiKPOF9Fa4dShMZMPjzkxeYQeK32iT3z6nUYW2vSOPL7ROUbrWCxvTCTMvf-qjLKgv7fYaqJ6j2JEvKQxSgkZhdY8q6qvxYHrDJGwmwF41xG7oBO1biohtPmwLsiOftJdDtsqXeNBi-cHzsgmZbygilGTYfcb9pPUNwO3BmtFkbEHtU2iHnOUJ4jxQ43nJFIhIDkO7py4ZhyEsIYkFoJjGeaN-Ge3cwiRnH5w-n0x4gbQzLW_m6Thje7w2YmokRMGNlN2tgSGZ_19sZYZ6nQjObDa95ovBqsUyiDpWddwLgUpuHUfCtZ7hVRx1aiXwNWgXA7U7FYc_6U7yHphYpeANkyU5h57ugNS670K46mAKAfOb8nCOUzrCyCYZaEnORU6P4cUGb6WDaxgp9rD1ocAsGIz_SzXegLgJvcQZgWT1gliln4x-7jdFFOzMWmURNDYueuT-V9PGVURGz7xBqFm2Ad7xiMRHqxEu6BEg4o2OwykCecO9XB-JumnFvvjzVGwQAJ9mam_2J5LHaU9I3JW0KFsCn8EYSymaQ_V2Rodtyv-ANrqiSDCOSbRalLk91-xmAZIQGq-tRJm6jZL5ABaIjMYSwtyA=w814-h702-no?authuser=0"  width="400"  height="400" style="display: block; margin-left: auto; margin-right: auto; width: 50%;"/></div>
+<div align="center"><img src="https://i.imgur.com/eEPemyL.png" width="400" height="400" style="display: block; margin-left: auto; margin-right: auto; width: 50%;"/></div>
 
 # Angular URL Preview
 
@@ -6,7 +6,12 @@ Angular UI card component which fetches and displays metadata from a URL (title,
 
 The latest stable Angular version this package is built with is **13.0.0**
 
-[![npm version](https://badge.fury.io/js/angular-url-preview.svg)](https://badge.fury.io/js/angular-url-preview) ![package downloads](https://img.shields.io/npm/dt/angular-url-preview)
+<a href="https://www.npmjs.com/angular-url-preview">
+  <img src="https://img.shields.io/npm/v/angular-url-preview?logo=npm&logoColor=fff&label=npm+version&color=limegreen" alt="Angular URL Preview npm" />
+</a> &nbsp; 
+<a href="https://www.npmjs.com/angular-url-preview">
+  <img src="https://img.shields.io/npm/dt/angular-url-preview?logo=npm&logoColor=fff&label=npm+downloads&color=limegreen" alt="Angular URL Preview npm" />
+</a>
 
 **This package uses a [proxy server](https://github.com/Dhaiwat10/rlp-proxy) to bypass CORS restriction and mimic a request with an "Access-Control-Allow-Origin" HTTP header present. It behaves similarly to [CORS anywhere](https://cors-anywhere.herokuapp.com/) without the need for an opt-in or a URL whitelist/blacklist.**
 
@@ -18,7 +23,6 @@ The latest stable Angular version this package is built with is **13.0.0**
 `npm install angular-url-preview`
 
 In app.module.ts:
-
 ```typescript
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
