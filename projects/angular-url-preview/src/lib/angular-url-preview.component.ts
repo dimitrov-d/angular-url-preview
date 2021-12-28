@@ -20,15 +20,14 @@ export class AngularUrlPreviewComponent implements OnInit {
   ngOnInit(): void {
     if (!this.validateUrl()) return;
 
-    type metadataResult = { metadata: URLMetadata };
+    type MetadataResult = { metadata: URLMetadata };
 
     this.http.get(`${this.proxyUrl}?url=${this.url}`)
-      .pipe(catchError(error => {
-        if (error.status === 404) return throwError(() => `URL not found: ${this.url}`);
-        else return throwError(() => `Error fetching URL metadata for ${this.url}`);;
-      }))
-      .subscribe(result => {
-        const data = result as metadataResult;
+      .pipe(catchError(error => (error.status === 404)
+        ? throwError(() => `URL not found: ${this.url}`)
+        : throwError(() => `Error fetching URL metadata for ${this.url}`)
+      )).subscribe(result => {
+        const data = result as MetadataResult;
         this.metadata = new URLMetadata(data.metadata);
         // Get the second-to-last segment of the host name
         const siteName = this.metadata.hostname.split('.').splice(-2)[0];
