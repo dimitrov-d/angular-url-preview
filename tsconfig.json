@@ -6,7 +6,11 @@
       "angular-url-preview": [
         "dist/angular-url-preview/angular-url-preview",
         "dist/angular-url-preview"
-      ]
+      ],
+      "url-preview-demo": [
+        "dist/url-preview-demo/url-preview-demo",
+        "dist/url-preview-demo"
+      ],
     },
     "baseUrl": "./",
     "outDir": "./dist/out-tsc",
