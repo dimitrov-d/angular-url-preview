@@ -48,6 +48,15 @@ Specifying the URL is mandatory and it can be in any format, such as:
 - Subdomain: www.example.com
 - With protocol included: https://example.com or https://www.example.com
 
+## Development Server (Demo application)
+
+To try out the demo app, in the root folder run
+`npm install`
+
+After that, run `ng serve` or `npm start` for a development server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+
+The source files of the demo app are located in projects/url-preview-demo/
+
 ## Troubleshooting
 It is possible that an error occurs while attempting to scrape the metadata from a website. It's important to note that an error most usually occurs if the target resource is not found or it does not provide the adequate metadata to its client. To check if an error has occurred it's a good idea to take a look at the developer console of your browser.
 
