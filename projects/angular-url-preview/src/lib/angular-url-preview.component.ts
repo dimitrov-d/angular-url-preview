@@ -12,6 +12,13 @@ export class AngularUrlPreviewComponent implements OnInit {
   @Input() url!: string;
   @Input() customImageSrc?: string;
 
+  @Input() styledFooter = false;
+  @Input() displayImage = true;
+
+  @Input() height?: string | number
+  @Input() width?: string | number;
+  @Input() imageHeight?: string | number;
+
   proxyUrl = 'https://rlp-proxy.herokuapp.com/v2';
   metadata!: URLMetadata;
 
@@ -39,6 +46,8 @@ export class AngularUrlPreviewComponent implements OnInit {
 
         this.metadata.image = this.customImageSrc || this.metadata.image;
       });
+
+    this.adjustInputs();
   }
 
   validateUrl(): boolean {
@@ -51,6 +60,11 @@ export class AngularUrlPreviewComponent implements OnInit {
 
   navigateToUrl(): Window {
     return window.open(this.metadata.url, '_blank') as Window;
+  }
+
+  private adjustInputs(): void {
+    (['height', 'width', 'imageHeight'] as const)
+      .forEach((field: keyof AngularUrlPreviewComponent) => (this[field] as string) = `${parseInt((this[field] as string))}px`);
   }
 
 }

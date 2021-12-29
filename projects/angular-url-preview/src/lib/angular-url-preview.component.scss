@@ -35,12 +35,12 @@ $shadow_color: rgba(0, 0, 0, 0.2);
   padding: 5px 13px;
 
   div.card-title {
-    font-size: 18px;
+    font-size: 1.1rem;
     font-weight: 600;
   }
 
   p.card-description {
-    font-size: 15px;
+    font-size: 0.9rem;
     color: #888080;
     font-weight: 400;
     margin-top: 10px;
@@ -49,9 +49,17 @@ $shadow_color: rgba(0, 0, 0, 0.2);
   }
 
   p.card-footer {
-    font-size: 12px;
+    font-size: 0.7rem;
     font-weight: 400;
     color: #534D4D;
+    padding: 0.5em 0.3em;
+    background-color: inherit;
+    border-top: none;
+
+    &.styled-footer {
+      background-color: rgba(0, 0, 0, 0.03);
+      border-top: 1px solid rgba(0, 0, 0, 0.125);
+    }
   }
 }
 

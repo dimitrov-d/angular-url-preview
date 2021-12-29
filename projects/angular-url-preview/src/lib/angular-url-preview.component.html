@@ -1,9 +1,10 @@
-<div class="card" *ngIf="metadata" (click)="navigateToUrl()">
-  <img class="card-image" [src]="metadata.image">
+<div class="card" *ngIf="metadata" (click)="navigateToUrl()" [ngStyle]="{'height': height, 'width': width}">
+  <img class="card-image" [src]="metadata.image" [style.height]="imageHeight" *ngIf="displayImage">
   <div class="card-body">
     <div class="card-title"> {{metadata.title}} </div>
     <p class="card-description"> {{metadata.description}} </p>
-    <p class="card-footer"> {{metadata.siteName}} &#9679; {{metadata.hostname}} </p>
+    <p class="card-footer" [class.styled-footer]="styledFooter"> {{metadata.siteName}} &#9679; {{metadata.hostname}}
+    </p>
   </div>
 </div>
 
