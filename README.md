@@ -8,7 +8,7 @@ The latest stable Angular version this package is built with is **13.0.0**
 
 <a href="https://www.npmjs.com/angular-url-preview">
   <img src="https://img.shields.io/npm/v/angular-url-preview?logo=npm&logoColor=fff&label=npm+version&color=limegreen" alt="Angular URL Preview npm" />
-</a> &nbsp; 
+</a> &nbsp;
 <a href="https://www.npmjs.com/angular-url-preview">
   <img src="https://img.shields.io/npm/dt/angular-url-preview?logo=npm&logoColor=fff&label=npm+downloads&color=limegreen" alt="Angular URL Preview npm" />
 </a>
@@ -47,6 +47,33 @@ Specifying the URL is mandatory and it can be in any format, such as:
 - Apex domain: example.com
 - Subdomain: www.example.com
 - With protocol included: https://example.com or https://www.example.com
+
+## Customization
+
+**`displayImage: boolean`** - Specify whether the image should be shown in the card. Default is `true`.
+
+**`customImageSrc: string`** - Source of the image used in the cards. Source URL can be relative e.g. `/assets/image.jpg` or an absolute url.
+
+**`styledFooter: boolean`** - Specify whether the footer should be styled, which adds a background color and a top border. Default is `false`.
+
+**`height: string | number`** - Height of the card. Can be set in multiple formats, such as for example "400" (string), 400 (number) or "400px". Same rule is valid for the options below.
+
+**`width: string | number`** - Width of the card.
+
+**`imageHeight: string | number`** - Height of the image in the card. The width of the image adapts to the width of the card.
+
+Additionally, it is possible to specify global styles for the component, which will be valid for every instance of the component without having to repeatedly specify the same configuration. To achieve this, add the `.forRoot(config: URLPreviewConfig)` configuration to the import of the `AngularUrlPreviewModule` in your main module. The `URLPreviewConfig` is a subset of the `AngularUrlPreviewComponent` and optionally contains all of the fields above.
+*Example:*
+
+```typescript
+@NgModule({
+...
+	imports: [
+	...
+		AngularUrlPreviewModule.forRoot({ displayImage: false, styledFooter: true, height: 300 })
+	]
+})
+```
 
 ## Development Server (Demo application)
 

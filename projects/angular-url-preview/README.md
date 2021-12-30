@@ -41,6 +41,33 @@ Specifying the URL is mandatory and it can be in any format, such as:
 - Subdomain: www.example.com
 - With protocol included: https://example.com or https://www.example.com
 
+## Customization
+
+**`displayImage: boolean`** - Specify whether the image should be shown in the card. Default is `true`.
+
+**`customImageSrc: string`** - Source of the image used in the cards. Source URL can be relative e.g. `/assets/image.jpg` or an absolute url.
+
+**`styledFooter: boolean`** - Specify whether the footer should be styled, which adds a background color and a top border. Default is `false`.
+
+**`height: string | number`** - Height of the card. Can be set in multiple formats, such as for example "400" (string), 400 (number) or "400px". Same rule is valid for the options below.
+
+**`width: string | number`** - Width of the card.
+
+**`imageHeight: string | number`** - Height of the image in the card. The width of the image adapts to the width of the card.
+
+Additionally, it is possible to specify global styles for the component, which will be valid for every instance of the component without having to repeatedly specify the same configuration. To achieve this, add the `.forRoot(config: URLPreviewConfig)` configuration to the import of the `AngularUrlPreviewModule` in your main module. The `URLPreviewConfig` is a subset of the `AngularUrlPreviewComponent` and optionally contains all of the fields above.
+*Example:*
+
+```typescript
+@NgModule({
+...
+	imports: [
+	...
+		AngularUrlPreviewModule.forRoot({ displayImage: false, styledFooter: true, height: 300 })
+	]
+})
+```
+
 ## Troubleshooting
 It is possible that an error occurs while attempting to scrape the metadata from a website. It's important to note that an error most usually occurs if the target resource is not found or it does not provide the adequate metadata to its client. To check if an error has occurred it's a good idea to take a look at the developer console of your browser.
 

@@ -8,7 +8,7 @@ export class URLPreviewConfig {
      */
     customImageSrc?: string;
     /**
-     * Specifies whether the footer should be styled. Default is false
+     * Specify whether the footer should be styled. Default is false
      */
     styledFooter?: boolean;
     /**
