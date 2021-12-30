@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input, OnInit, Optional } from '@angular/core';
 import { catchError, throwError } from 'rxjs';
+import { URLPreviewConfig } from './types/angular-url-preview.config';
 import { URLMetadata } from './types/url-metadata';
 
 @Component({
@@ -10,8 +11,8 @@ import { URLMetadata } from './types/url-metadata';
 })
 export class AngularUrlPreviewComponent implements OnInit {
   @Input() url!: string;
-  @Input() customImageSrc?: string;
 
+  @Input() customImageSrc?: string;
   @Input() styledFooter = false;
   @Input() displayImage = true;
 
@@ -22,7 +23,9 @@ export class AngularUrlPreviewComponent implements OnInit {
   proxyUrl = 'https://rlp-proxy.herokuapp.com/v2';
   metadata!: URLMetadata;
 
-  constructor(private http: HttpClient) { }
+  constructor(@Optional() config: URLPreviewConfig, private http: HttpClient) {
+    this.assignConfiguration(config);
+  }
 
   ngOnInit(): void {
     if (!this.validateUrl()) return;
@@ -60,6 +63,11 @@ export class AngularUrlPreviewComponent implements OnInit {
 
   navigateToUrl(): Window {
     return window.open(this.metadata.url, '_blank') as Window;
+  }
+
+  private assignConfiguration(config: URLPreviewConfig): void {
+    if (!config) return;
+    Object.assign(this, config as Partial<AngularUrlPreviewComponent>);
   }
 
   private adjustInputs(): void {
