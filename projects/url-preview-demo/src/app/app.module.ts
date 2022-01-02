@@ -5,7 +5,7 @@ import { AngularUrlPreviewModule } from 'angular-url-preview';
 
 @NgModule({
   declarations: [AppComponent],
-  imports: [BrowserModule, AngularUrlPreviewModule],
+  imports: [BrowserModule, AngularUrlPreviewModule.forRoot({ width: 400 })],
   bootstrap: [AppComponent]
 
 })
