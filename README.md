@@ -30,9 +30,9 @@ import { AppComponent } from './app.component';
 import { AngularUrlPreviewModule } from 'angular-url-preview';
 
 @NgModule({
-declarations: [AppComponent],
-imports: [BrowserModule, AngularUrlPreviewModule],
-bootstrap: [AppComponent]
+  declarations: [AppComponent],
+  imports: [BrowserModule, AngularUrlPreviewModule],
+  bootstrap: [AppComponent]
 })
 export class AppModule { }
 ```
@@ -67,11 +67,11 @@ Additionally, it is possible to specify global styles for the component, which w
 
 ```typescript
 @NgModule({
-...
-	imports: [
-	...
-		AngularUrlPreviewModule.forRoot({ displayImage: false, styledFooter: true, height: 300 })
-	]
+  ...
+  imports: [
+  ...
+	AngularUrlPreviewModule.forRoot({ displayImage: false, styledFooter: true, height: 300 })
+  ]
 })
 ```
 
