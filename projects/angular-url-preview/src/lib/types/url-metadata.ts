@@ -1,12 +1,12 @@
 export class URLMetadata {
-    hostname!: string;
-    title!: string;
-    description!: string;
-    image!: string;
-    siteName!: string;
-    url!: string;
+  hostname!: string;
+  title!: string | null | undefined;
+  description!: string | null | undefined;
+  image!: string | null | undefined;
+  siteName!: string;
+  url!: string;
 
-    constructor(metadata: URLMetadata) {
-        Object.assign(this, metadata);
-    }
+  constructor(metadata: URLMetadata) {
+    Object.assign(this, metadata);
+  }
 };
